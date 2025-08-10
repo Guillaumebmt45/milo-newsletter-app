@@ -50,15 +50,7 @@ const LiquidHero: React.FC = () => {
           <div className="p-4 rounded-2xl backdrop-blur-xl bg-white/5 border border-white/10">
             <MiloLogo className="h-12 w-auto" />
           </div>
-         
-         {/* Milo Activities */}
-        <div className="relative max-w-2xl mx-auto">
-          <div className="p-6">
-            <h3 className="text-white text-xl font-semibold mb-6 text-center">Activités récentes de Milo</h3>
-            <AnimatedListDemo className="h-[500px]" />
-          </div>
         </div>
-       </div>
         
         {/* Main Heading */}
         <h1 className="font-heading text-3xl md:text-5xl lg:text-6xl text-white mb-6 leading-tight max-w-3xl mx-auto">
@@ -95,8 +87,15 @@ const LiquidHero: React.FC = () => {
             </p>
           </div>
         </div>
-
-       </div>
+        
+        {/* Milo Activities */}
+        <div className="relative max-w-2xl mx-auto mt-16">
+          <div className="p-6">
+            <h3 className="text-white text-xl font-semibold mb-6 text-center">Activités récentes de Milo</h3>
+            <AnimatedListDemo className="h-[500px]" />
+          </div>
+        </div>
+      </div>
 
     </section>
   );
