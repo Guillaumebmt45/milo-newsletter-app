@@ -1,12 +1,22 @@
 {
-  "buildCommand": "cd react-version && npm run build",
-  "outputDirectory": "react-version/build",
-  "installCommand": "cd react-version && npm install",
-  "devCommand": "cd react-version && npm start",
-  "rewrites": [
+  "functions": {
+    "react-version/src/**": {
+      "runtime": "nodejs18.x"
+    }
+  },
+  "builds": [
     {
-      "source": "/(.*)",
-      "destination": "/index.html"
+      "src": "react-version/package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "build"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/react-version/build/index.html"
     }
   ]
 }
