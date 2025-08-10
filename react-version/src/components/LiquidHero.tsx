@@ -87,14 +87,7 @@ const LiquidHero: React.FC = () => {
             </p>
           </div>
         </div>
-         
-         {/* Milo Activities */}
-        <div className="relative max-w-2xl mx-auto">
-          <div className="p-6">
-            <h3 className="text-white text-xl font-semibold mb-6 text-center">Activités récentes de Milo</h3>
-            <AnimatedListDemo className="h-[500px]" />
-          </div>
-        </div>
+
        </div>
        
        {/* Floating Elements */}
