@@ -35,7 +35,7 @@ export function AnimatedSubscribeButtonControlledDemo({ onSubscribeClick }: Anim
 
   return (
     <AnimatedSubscribeButton
-      className="px-6 py-3 md:px-8 md:py-3 font-semibold rounded-xl whitespace-nowrap min-w-[140px] text-sm md:text-base"
+      className="w-full md:w-auto px-6 py-3 md:px-8 md:py-3 font-semibold rounded-xl whitespace-nowrap md:min-w-[140px] text-sm md:text-base"
       subscribeStatus={subscribed}
       onClick={handleClick}
     >

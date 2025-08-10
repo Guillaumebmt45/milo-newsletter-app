@@ -63,9 +63,9 @@ const LiquidHero: React.FC = () => {
         </p>
         
         {/* Newsletter Signup */}
-        <div className="w-full max-w-md mx-auto mb-12 md:mb-16 px-1 sm:px-2">
+        <div className="w-full max-w-lg mx-auto mb-12 md:mb-16 px-1 sm:px-2">
           <div className="relative backdrop-blur-xl bg-white/5 border border-white/10 rounded-xl md:rounded-2xl p-3 sm:p-4 md:p-6">
-            <div className="flex flex-col gap-3">
+            <div className="flex flex-col md:flex-row gap-3 md:gap-4">
               <div className="flex-1">
                 <input 
                   type="email" 
@@ -80,7 +80,9 @@ const LiquidHero: React.FC = () => {
                   <p className="text-red-400 text-sm mt-1">{emailError}</p>
                 )}
               </div>
-              <AnimatedSubscribeButtonControlledDemo onSubscribeClick={handleSubscribeClick} />
+              <div className="md:flex-shrink-0">
+                <AnimatedSubscribeButtonControlledDemo onSubscribeClick={handleSubscribeClick} />
+              </div>
             </div>
             <p className="text-white/50 text-sm mt-3 text-center">
               Rejoins 10,000+ utilisateurs qui gagnent du temps chaque jour
