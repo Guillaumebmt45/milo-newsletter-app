@@ -41,14 +41,16 @@ This is a responsive, single-page newsletter landing page for Milo, designed to 
 
 ```
 /
-├── index.html          # Main HTML file
-├── styles.css          # CSS styles
-├── script.js           # JavaScript functionality
-├── assets/             # Static assets
-│   ├── milo-logo.svg   # Logo
-│   ├── favicon.svg     # Favicon
+├── react-version/      # React application
+│   ├── src/           # Source code
+│   ├── public/        # Public assets
+│   ├── package.json   # Dependencies
+│   └── craco.config.js # Build configuration
+├── assets/            # Static assets
+│   ├── milo-logo.svg  # Logo
+│   ├── favicon.svg    # Favicon
 │   └── milo-og-image.svg # Open Graph image
-└── README.md           # This file
+└── vercel.json        # Deployment configuration
 ```
 
 ## Newsletter Integration
