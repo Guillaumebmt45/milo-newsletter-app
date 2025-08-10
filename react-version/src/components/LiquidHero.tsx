@@ -53,7 +53,7 @@ const LiquidHero: React.FC = () => {
         </div>
         
         {/* Main Heading */}
-        <h1 className="font-heading text-3xl sm:text-4xl md:text-6xl lg:text-7xl xl:text-8xl text-white mb-6 md:mb-8 leading-tight max-w-6xl mx-auto px-1 sm:px-2">
+        <h1 className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl text-white mb-6 md:mb-8 leading-tight max-w-6xl mx-auto px-1 sm:px-2">
           Gagne jusqu'à 4 heures par jour avec <span className="italic font-bold">milo</span>
         </h1>
         
