@@ -57,9 +57,12 @@ export const NewsletterProvider: React.FC<NewsletterProviderProps> = ({ children
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
+    // Get UTM parameters for tracking
+    const utmParams = getUtmParams();
+    
     // Track form submission attempt
     window.dispatchEvent(new CustomEvent('track', { 
-      detail: { event: 'Newsletter_Submit', properties: { email } }
+      detail: { event: 'Newsletter_Submit', properties: { email, ...utmParams } }
     }));
 
     // Validate email and consent
@@ -77,9 +80,6 @@ export const NewsletterProvider: React.FC<NewsletterProviderProps> = ({ children
 
     setFormState('loading');
     setErrorMessage('');
-
-    // Get UTM parameters for tracking
-    const utmParams = getUtmParams();
 
     try {
       // In a real implementation, this would be an actual API endpoint
