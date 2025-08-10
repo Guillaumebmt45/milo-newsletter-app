@@ -78,6 +78,9 @@ export const NewsletterProvider: React.FC<NewsletterProviderProps> = ({ children
     setFormState('loading');
     setErrorMessage('');
 
+    // Get UTM parameters for tracking
+    const utmParams = getUtmParams();
+
     try {
       // In a real implementation, this would be an actual API endpoint
       // const response = await fetch('https://api.example.com/newsletter/subscribe', {
