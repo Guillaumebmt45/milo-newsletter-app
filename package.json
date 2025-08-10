@@ -1,0 +1,17 @@
+{
+  "name": "milo-newsletter-landing",
+  "version": "1.0.0",
+  "description": "Milo Newsletter Landing Page",
+  "main": "react-version/src/index.tsx",
+  "scripts": {
+    "dev": "cd react-version && npm start",
+    "build": "cd react-version && npm run build",
+    "install-deps": "cd react-version && npm install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Guillaumebmt45/milo-newsletter-landing.git"
+  },
+  "author": "Guillaume",
+  "license": "MIT"
+}

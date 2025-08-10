@@ -1,0 +1,44 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Dark background -->
+  <rect width="1200" height="630" fill="#0B0B0C"/>
+  
+  <!-- Accent color border -->
+  <rect x="4" y="4" width="1192" height="622" rx="8" stroke="#6366F1" stroke-width="8"/>
+  
+  <!-- Logo and text container -->
+  <g transform="translate(150, 150)">
+    <!-- Milo Logo (larger version) -->
+    <g transform="scale(2)">
+      <!-- Mascot (circle with face) -->
+      <circle cx="16" cy="16" r="16" fill="white"/>
+      
+      <!-- Simplified face -->
+      <circle cx="10" cy="14" r="1.5" fill="#0B0B0C"/>
+      <circle cx="22" cy="14" r="1.5" fill="#0B0B0C"/>
+      <path d="M16 22C18.2091 22 20 20.2091 20 18H12C12 20.2091 13.7909 22 16 22Z" fill="#0B0B0C"/>
+      
+      <!-- Wordmark -->
+      <path d="M45 10H48V22H45V10Z" fill="white"/>
+      <path d="M52 10H55L60 18V10H63V22H60L55 14V22H52V10Z" fill="white"/>
+      <path d="M67 10H70V19H77V22H67V10Z" fill="white"/>
+      <path d="M80 10H87C89 10 91 12 91 14C91 16 89 18 87 18H83V22H80V10ZM83 15H86C86.5 15 87 14.5 87 14C87 13.5 86.5 13 86 13H83V15Z" fill="white"/>
+    </g>
+    
+    <!-- Tagline -->
+    <text x="0" y="120" font-family="Inter, sans-serif" font-size="36" font-weight="700" fill="white" letter-spacing="-0.025em">
+      The newsletter that accelerates your launches with agentic AI.
+    </text>
+    
+    <!-- Subtitle -->
+    <text x="0" y="180" font-family="Inter, sans-serif" font-size="24" font-weight="400" fill="#C7CBD1">
+      Weekly, actionable tactics, proven prompts, and case studies. No fluff.
+    </text>
+  </g>
+  
+  <!-- Decorative elements -->
+  <g opacity="0.1">
+    <circle cx="1000" cy="150" r="80" fill="#6366F1"/>
+    <circle cx="900" cy="500" r="60" fill="#6366F1"/>
+    <circle cx="1100" cy="350" r="40" fill="#6366F1"/>
+  </g>
+</svg>

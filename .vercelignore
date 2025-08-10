@@ -1,0 +1,15 @@
+# Ignore everything except react-version
+*
+!react-version/
+!vercel.json
+!package.json
+
+# But ignore these in react-version
+react-version/node_modules
+react-version/.env.local
+react-version/.env.development.local
+react-version/.env.test.local
+react-version/.env.production.local
+react-version/npm-debug.log*
+react-version/yarn-debug.log*
+react-version/yarn-error.log*

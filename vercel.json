@@ -1,0 +1,12 @@
+{
+  "buildCommand": "cd react-version && npm run build",
+  "outputDirectory": "react-version/build",
+  "installCommand": "cd react-version && npm install",
+  "devCommand": "cd react-version && npm start",
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}
