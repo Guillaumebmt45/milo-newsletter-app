@@ -1,7 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import LiquidHero from './components/LiquidHero';
+import AdminHeader from './components/AdminHeader';
+import ProtectedRoute from './components/ProtectedRoute';
 import { NewsletterProvider } from './contexts/NewsletterContext';
 import { AnalyticsProvider } from './contexts/AnalyticsContext';
+import { AuthProvider } from './contexts/AuthContext';
 
 const App: React.FC = () => {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -34,15 +37,20 @@ const App: React.FC = () => {
   }, []);
 
   return (
-    <AnalyticsProvider>
-      <NewsletterProvider>
-        <div className={`min-h-screen ${isLoaded ? 'opacity-100' : 'opacity-0'} transition-opacity duration-500`}>
-          <main>
-            <LiquidHero />
-          </main>
-        </div>
-      </NewsletterProvider>
-    </AnalyticsProvider>
+    <AuthProvider>
+      <ProtectedRoute>
+        <AnalyticsProvider>
+          <NewsletterProvider>
+            <div className={`min-h-screen ${isLoaded ? 'opacity-100' : 'opacity-0'} transition-opacity duration-500`}>
+              <AdminHeader />
+              <main>
+                <LiquidHero />
+              </main>
+            </div>
+          </NewsletterProvider>
+        </AnalyticsProvider>
+      </ProtectedRoute>
+    </AuthProvider>
   );
 };
 
