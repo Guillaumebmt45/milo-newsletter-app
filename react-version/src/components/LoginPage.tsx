@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useAuth } from '../contexts/AuthContext';
+import MiloLogo from './MiloLogo';
 
 const LoginPage: React.FC = () => {
   const [password, setPassword] = useState('');
@@ -24,23 +25,21 @@ const LoginPage: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 flex items-center justify-center px-4">
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-800 flex items-center justify-center px-4">
       <div className="max-w-md w-full space-y-8">
         <div className="text-center">
-          <div className="mx-auto h-16 w-16 bg-indigo-600 rounded-full flex items-center justify-center mb-4">
-            <svg className="h-8 w-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
-            </svg>
+          <div className="mx-auto mb-6">
+            <MiloLogo className="h-20 w-auto mx-auto" />
           </div>
-          <h2 className="text-3xl font-bold text-gray-900 mb-2">Accès Privé</h2>
-          <p className="text-gray-600">Veuillez entrer le mot de passe pour accéder à l'application</p>
+          <h2 className="text-3xl font-bold text-white mb-2">Accès Privé</h2>
+          <p className="text-gray-300">Veuillez entrer le mot de passe pour accéder à l'application</p>
         </div>
         
         <form className="mt-8 space-y-6" onSubmit={handleSubmit}>
-          <div className="bg-white p-8 rounded-xl shadow-lg">
+          <div className="bg-gray-800 border border-gray-700 p-8 rounded-xl shadow-2xl">
             <div className="space-y-4">
               <div>
-                <label htmlFor="password" className="block text-sm font-medium text-gray-700 mb-2">
+                <label htmlFor="password" className="block text-sm font-medium text-gray-200 mb-2">
                   Mot de passe
                 </label>
                 <input
@@ -50,14 +49,14 @@ const LoginPage: React.FC = () => {
                   required
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition-colors"
+                  className="w-full px-4 py-3 bg-gray-700 border border-gray-600 text-white rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition-colors placeholder-gray-400"
                   placeholder="Entrez votre mot de passe"
                   disabled={isLoading}
                 />
               </div>
               
               {error && (
-                <div className="bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded-lg text-sm">
+                <div className="bg-red-900/50 border border-red-700 text-red-300 px-4 py-3 rounded-lg text-sm">
                   {error}
                 </div>
               )}
@@ -65,7 +64,7 @@ const LoginPage: React.FC = () => {
               <button
                 type="submit"
                 disabled={isLoading || !password.trim()}
-                className="w-full flex justify-center py-3 px-4 border border-transparent rounded-lg shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+                className="w-full flex justify-center py-3 px-4 border border-transparent rounded-lg shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 disabled:opacity-50 disabled:cursor-not-allowed transition-colors focus:ring-offset-gray-800"
               >
                 {isLoading ? (
                   <div className="flex items-center">
@@ -84,7 +83,7 @@ const LoginPage: React.FC = () => {
         </form>
         
         <div className="text-center">
-          <p className="text-sm text-gray-500">
+          <p className="text-sm text-gray-400">
             Application Milo Newsletter - Accès Administrateur
           </p>
         </div>
