@@ -35,7 +35,7 @@ const LiquidHero: React.FC = () => {
   };
 
   return (
-    <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden bg-black px-4 md:px-6 pt-16 md:pt-20">
+    <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden bg-black px-2 sm:px-4 md:px-6 pt-16 md:pt-20">
 
       
       {/* Meteors Effect */}
@@ -44,7 +44,7 @@ const LiquidHero: React.FC = () => {
       </div>
       
       {/* Main Content */}
-      <div className="relative z-10 max-w-6xl mx-auto text-center">
+      <div className="relative z-10 w-full max-w-6xl mx-auto text-center px-2 sm:px-4">
         {/* Logo */}
         <div className="flex justify-center mb-6 md:mb-8">
           <div className="p-3 md:p-4 rounded-xl md:rounded-2xl backdrop-blur-xl bg-white/5 border border-white/10">
@@ -53,18 +53,18 @@ const LiquidHero: React.FC = () => {
         </div>
         
         {/* Main Heading */}
-        <h1 className="font-heading text-3xl md:text-5xl lg:text-6xl text-white mb-4 md:mb-6 leading-tight max-w-4xl mx-auto px-2">
+        <h1 className="font-heading text-2xl sm:text-3xl md:text-5xl lg:text-6xl text-white mb-4 md:mb-6 leading-tight max-w-4xl mx-auto px-1 sm:px-2">
           Gagne jusqu'à 4 heures<br className="hidden md:block"/>par jour avec <span className="italic font-bold">milo</span>
         </h1>
         
         {/* Subheading */}
-        <p className="text-lg md:text-xl text-white/60 mb-8 md:mb-12 max-w-2xl mx-auto leading-relaxed px-2">
+        <p className="text-base sm:text-lg md:text-xl text-white/60 mb-8 md:mb-12 max-w-2xl mx-auto leading-relaxed px-1 sm:px-2">
           Email, WhatsApp, IG DM, devis & factures. Tu lui parles → il agit
         </p>
         
         {/* Newsletter Signup */}
-        <div className="w-full max-w-md mx-auto mb-12 md:mb-16 px-2">
-          <div className="relative backdrop-blur-xl bg-white/5 border border-white/10 rounded-xl md:rounded-2xl p-4 md:p-6">
+        <div className="w-full max-w-md mx-auto mb-12 md:mb-16 px-1 sm:px-2">
+          <div className="relative backdrop-blur-xl bg-white/5 border border-white/10 rounded-xl md:rounded-2xl p-3 sm:p-4 md:p-6">
             <div className="flex flex-col gap-3">
               <div className="flex-1">
                 <input 
@@ -89,9 +89,9 @@ const LiquidHero: React.FC = () => {
         </div>
         
         {/* Milo Activities */}
-        <div className="relative max-w-2xl mx-auto mt-12 md:mt-16 px-2">
-          <div className="p-4 md:p-6">
-            <h3 className="text-white text-xl md:text-2xl font-semibold mb-6 text-center">Activités récentes de Milo</h3>
+        <div className="relative w-full max-w-2xl mx-auto mt-12 md:mt-16 px-1 sm:px-2">
+          <div className="p-3 sm:p-4 md:p-6">
+            <h3 className="text-white text-lg sm:text-xl md:text-2xl font-semibold mb-6 text-center">Activités récentes de Milo</h3>
             <AnimatedListDemo className="h-[400px] md:h-[500px]" />
           </div>
         </div>

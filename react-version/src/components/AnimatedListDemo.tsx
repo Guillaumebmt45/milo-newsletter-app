@@ -48,7 +48,7 @@ const Notification = ({ name, description, icon, color, time }: Item) => {
   return (
     <figure
       className={cn(
-        "relative mx-auto min-h-fit w-full max-w-[400px] cursor-pointer overflow-hidden rounded-xl p-4",
+        "relative mx-auto min-h-fit w-full max-w-[350px] sm:max-w-[400px] cursor-pointer overflow-hidden rounded-xl p-3 sm:p-4",
         // animation styles
         "transition-all duration-200 ease-in-out hover:scale-[103%]",
         // light styles
@@ -62,17 +62,17 @@ const Notification = ({ name, description, icon, color, time }: Item) => {
           <img src="/favicon.svg" alt="Milo Favicon" className="h-8 sm:h-10 w-8 sm:w-10 object-cover" />
         </div>
         <div className="flex flex-col overflow-hidden text-left min-w-0 flex-1">
-          <figcaption className="flex flex-row items-center whitespace-pre text-base font-medium dark:text-white ">
-            <div className="flex flex-col overflow-hidden">
-              <div className="truncate text-base font-semibold">
+          <div className="flex flex-row items-start justify-between gap-2">
+            <div className="flex flex-col overflow-hidden flex-1 min-w-0">
+              <div className="truncate text-sm sm:text-base font-semibold dark:text-white">
                 {name}
               </div>
-              <div className="truncate text-sm text-gray-500">
+              <div className="truncate text-xs sm:text-sm text-gray-500">
                 {description}
               </div>
             </div>
-          </figcaption>
-          <div className="ml-auto text-xs text-gray-400">{time}</div>
+            <div className="text-xs text-gray-400 flex-shrink-0">{time}</div>
+          </div>
         </div>
       </div>
     </figure>
@@ -87,7 +87,7 @@ export function AnimatedListDemo({
   return (
     <div
       className={cn(
-        "relative flex h-[500px] w-full flex-col overflow-hidden p-2",
+        "relative flex h-[400px] sm:h-[500px] w-full flex-col overflow-hidden p-1 sm:p-2",
         className,
       )}
     >
