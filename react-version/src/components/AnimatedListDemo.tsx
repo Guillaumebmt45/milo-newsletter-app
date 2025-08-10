@@ -48,11 +48,13 @@ const Notification = ({ name, description, icon, color, time }: Item) => {
   return (
     <figure
       className={cn(
-        "relative mx-auto min-h-fit w-full max-w-[400px] cursor-pointer overflow-hidden rounded-xl sm:rounded-2xl p-3 sm:p-4",
+        "relative mx-auto min-h-fit w-full max-w-[400px] cursor-pointer overflow-hidden rounded-xl p-4",
         // animation styles
         "transition-all duration-200 ease-in-out hover:scale-[103%]",
-        // gray background styles matching newsletter
-        "bg-white/5 border border-white/10 shadow-2xl backdrop-blur-xl",
+        // light styles
+        "bg-white [box-shadow:0_0_0_1px_rgba(0,0,0,.03),0_2px_4px_rgba(0,0,0,.05),0_12px_24px_rgba(0,0,0,.05)]",
+        // dark styles
+        "transform-gpu dark:bg-transparent dark:backdrop-blur-md dark:[border:1px_solid_rgba(255,255,255,.1)] dark:[box-shadow:0_-20px_80px_-20px_#ffffff1f_inset]",
       )}
     >
       <div className="flex flex-row items-center gap-2 sm:gap-3">
@@ -60,14 +62,17 @@ const Notification = ({ name, description, icon, color, time }: Item) => {
           <img src="/favicon.svg" alt="Milo Favicon" className="h-8 sm:h-10 w-8 sm:w-10 object-cover" />
         </div>
         <div className="flex flex-col overflow-hidden text-left min-w-0 flex-1">
-          <figcaption className="flex flex-row items-center text-sm sm:text-lg font-medium dark:text-white text-left">
-            <span className="truncate">{name}</span>
-            <span className="mx-1 flex-shrink-0">·</span>
-            <span className="text-xs text-gray-500 flex-shrink-0">{time}</span>
+          <figcaption className="flex flex-row items-center whitespace-pre text-base font-medium dark:text-white ">
+            <div className="flex flex-col overflow-hidden">
+              <div className="truncate text-base font-semibold">
+                {name}
+              </div>
+              <div className="truncate text-sm text-gray-500">
+                {description}
+              </div>
+            </div>
           </figcaption>
-          <p className="text-xs sm:text-sm font-normal dark:text-white/60 text-left truncate">
-            {description}
-          </p>
+          <div className="ml-auto text-xs text-gray-400">{time}</div>
         </div>
       </div>
     </figure>

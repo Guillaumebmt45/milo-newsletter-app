@@ -23,7 +23,7 @@ export const AnimatedSubscribeButton: React.FC<
   return (
     <button
       className={cn(
-        "group relative flex w-fit items-center justify-center overflow-hidden rounded-xl bg-black/50 border border-white/20 px-3 py-2 sm:px-4 sm:py-2 text-xs sm:text-sm font-medium text-white transition-all duration-300 ease-out shadow-lg hover:shadow-xl transform hover:scale-[1.02] active:scale-[0.98]",
+        "group relative flex w-fit items-center justify-center overflow-hidden rounded-xl bg-black/50 border border-white/20 px-4 py-2 text-sm font-medium text-white transition-all duration-300 ease-out shadow-lg hover:shadow-xl transform hover:scale-[1.02] active:scale-[0.98]",
         className,
       )}
       style={{
