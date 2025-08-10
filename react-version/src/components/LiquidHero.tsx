@@ -46,15 +46,15 @@ const LiquidHero: React.FC = () => {
       {/* Main Content */}
       <div className="relative z-10 w-full max-w-6xl mx-auto text-center px-2 sm:px-4">
         {/* Logo */}
-        <div className="flex justify-center mb-6 md:mb-8">
-          <div className="p-3 md:p-4 rounded-xl md:rounded-2xl backdrop-blur-xl bg-white/5 border border-white/10">
-            <MiloLogo className="h-8 md:h-12 w-auto" />
+        <div className="flex justify-center mb-8 md:mb-10">
+          <div className="p-4 md:p-6 rounded-xl md:rounded-2xl backdrop-blur-xl bg-white/5 border border-white/10">
+            <MiloLogo className="h-12 md:h-16 lg:h-20 w-auto" />
           </div>
         </div>
         
         {/* Main Heading */}
-        <h1 className="font-heading text-2xl sm:text-3xl md:text-5xl lg:text-6xl text-white mb-4 md:mb-6 leading-tight max-w-4xl mx-auto px-1 sm:px-2">
-          Gagne jusqu'à 4 heures<br className="hidden md:block"/>par jour avec <span className="italic font-bold">milo</span>
+        <h1 className="font-heading text-3xl sm:text-4xl md:text-6xl lg:text-7xl xl:text-8xl text-white mb-6 md:mb-8 leading-tight max-w-6xl mx-auto px-1 sm:px-2">
+          Gagne jusqu'à 4 heures par jour avec <span className="italic font-bold">milo</span>
         </h1>
         
         {/* Subheading */}
