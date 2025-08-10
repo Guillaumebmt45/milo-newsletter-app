@@ -48,7 +48,7 @@ const LiquidHero: React.FC = () => {
         {/* Logo */}
         <div className="flex justify-center mb-8 md:mb-10">
           <div className="p-4 md:p-6 rounded-xl md:rounded-2xl backdrop-blur-xl bg-white/5 border border-white/10">
-            <MiloLogo className="h-12 md:h-10 lg:h-12 w-auto" />
+            <MiloLogo className="h-12 md:h-8 lg:h-10 w-auto" />
           </div>
         </div>
         
